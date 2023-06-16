@@ -8,6 +8,8 @@ const beginGame = document.getElementById('start-btn')
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+const deleteBtn = document.getElementById("delete-btn")
+
 // 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
 let playerEl = document.getElementById('player-el')
 // 4. Render the player's name and chips in playerEl
@@ -45,7 +47,14 @@ function startGame() {
 }
 
 // delete btn
-
+deleteBtn.addEventListener('dblclick', clearBtn)
+function clearBtn(e){
+    console.log(e)
+    cards = []
+    sum = ""
+    renderGame()
+}
+// render dom
 function renderGame() {
     cardsEl.textContent = "Cards: "
     for (let i = 0; i < cards.length; i++) {
