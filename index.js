@@ -44,6 +44,8 @@ function startGame() {
     renderGame()
 }
 
+// delete btn
+
 function renderGame() {
     cardsEl.textContent = "Cards: "
     for (let i = 0; i < cards.length; i++) {
