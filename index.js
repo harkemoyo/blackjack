@@ -21,6 +21,7 @@ let playerEl = document.getElementById('player-el')
 
 playerEl.textContent = `${player.name}:
  $${player.chip} `
+ 
 function getRandomCard() {
     let randomNumber = Math.floor( Math.random()*15 ) + 1
 
